@@ -16,7 +16,7 @@ package eu.faircode.netguard;
     You should have received a copy of the GNU General Public License
     along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2015-2019 by Marcel Bokhorst (M66B)
+    Copyright 2015-2024 by Marcel Bokhorst (M66B)
 */
 
 import android.app.Activity;
@@ -72,7 +72,8 @@ public class DownloadTask extends AsyncTask<Object, Integer, Object> {
         wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, getClass().getName());
         wakeLock.acquire();
         showNotification(0);
-        Toast.makeText(context, context.getString(R.string.msg_downloading, url.toString()), Toast.LENGTH_SHORT).show();
+        if (!Util.isPlayStoreInstall(context))
+            Toast.makeText(context, context.getString(R.string.msg_downloading, url.toString()), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -157,7 +158,7 @@ public class DownloadTask extends AsyncTask<Object, Integer, Object> {
 
     private void showNotification(int progress) {
         Intent main = new Intent(context, ActivitySettings.class);
-        PendingIntent pi = PendingIntent.getActivity(context, ServiceSinkhole.NOTIFY_DOWNLOAD, main, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
+        PendingIntent pi = PendingIntentCompat.getActivity(context, ServiceSinkhole.NOTIFY_DOWNLOAD, main, PendingIntent.FLAG_UPDATE_CURRENT);
 
         TypedValue tv = new TypedValue();
         context.getTheme().resolveAttribute(R.attr.colorOff, tv, true);
@@ -175,7 +176,7 @@ public class DownloadTask extends AsyncTask<Object, Integer, Object> {
             builder.setCategory(NotificationCompat.CATEGORY_STATUS)
                     .setVisibility(NotificationCompat.VISIBILITY_SECRET);
 
-        NotificationManagerCompat.from(context).notify(ServiceSinkhole.NOTIFY_DOWNLOAD, builder.build());
+        if (Util.canNotify(context))
+            NotificationManagerCompat.from(context).notify(ServiceSinkhole.NOTIFY_DOWNLOAD, builder.build());
     }
-
 }

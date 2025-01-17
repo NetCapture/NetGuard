@@ -253,6 +253,18 @@ typedef struct pcaprec_hdr_s {
 
 #define LINKTYPE_RAW 101
 
+// TLS
+
+#define TLS_SNI_LENGTH 255
+#define TLS_HANDSHAKE_RECORD 22
+#define TLS_MESSAGE_CLIENTHELLO 1
+#define TLS_EXTENSION_TYPE_SERVER_NAME 0
+
+int get_sni(
+        const uint8_t *data,
+        const uint16_t datalen,
+        char *server_name);
+
 // DNS
 
 #define DNS_QCLASS_IN 1
@@ -509,7 +521,7 @@ void log_android(int prio, const char *fmt, ...);
 void log_packet(const struct arguments *args, jobject jpacket);
 
 void dns_resolved(const struct arguments *args,
-                  const char *qname, const char *aname, const char *resource, int ttl);
+                  const char *qname, const char *aname, const char *resource, int ttl, jint uid);
 
 jboolean is_domain_blocked(const struct arguments *args, const char *name);
 

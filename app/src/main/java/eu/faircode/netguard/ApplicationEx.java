@@ -16,7 +16,7 @@ package eu.faircode.netguard;
     You should have received a copy of the GNU General Public License
     along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2015-2019 by Marcel Bokhorst (M66B)
+    Copyright 2015-2024 by Marcel Bokhorst (M66B)
 */
 
 import android.annotation.TargetApi;
@@ -74,5 +74,10 @@ public class ApplicationEx extends Application {
         access.setSound(null, Notification.AUDIO_ATTRIBUTES_DEFAULT);
         access.setBypassDnd(true);
         nm.createNotificationChannel(access);
+
+        NotificationChannel malware = new NotificationChannel("malware", getString(R.string.setting_malware), NotificationManager.IMPORTANCE_HIGH);
+        malware.setSound(null, Notification.AUDIO_ATTRIBUTES_DEFAULT);
+        malware.setBypassDnd(true);
+        nm.createNotificationChannel(malware);
     }
 }

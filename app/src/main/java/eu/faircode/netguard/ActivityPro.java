@@ -16,7 +16,7 @@ package eu.faircode.netguard;
     You should have received a copy of the GNU General Public License
     along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2015-2019 by Marcel Bokhorst (M66B)
+    Copyright 2015-2024 by Marcel Bokhorst (M66B)
 */
 
 import android.app.PendingIntent;
@@ -279,13 +279,18 @@ public class ActivityPro extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        if (IAB.isPurchased(SKU_DONATION, this) || Util.isPlayStoreInstall(this))
+        if (Util.isPlayStoreInstall(this))
             menu.removeItem(R.id.menu_challenge);
 
         return super.onPrepareOptionsMenu(menu);
     }
 
     private void menu_challenge() {
+        if (IAB.isPurchased(SKU_DONATION, this)) {
+            Toast.makeText(this, getString(R.string.title_pro_already), Toast.LENGTH_LONG).show();
+            return;
+        }
+
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.challenge, null, false);
 

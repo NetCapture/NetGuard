@@ -37,6 +37,8 @@ However, this does not work properly on all Android versions/variants causing Ne
 On Android N and later NetGuard can be configured as [Always-On VPN](https://developer.android.com/guide/topics/connectivity/vpn#always-on).
 On Android O **do not** enable the sub option '*Block connections without VPN*', see [question 51](#user-content-faq51)) for more information on this.
 
+The app obviously can't protect you from bugs in Android, such as documented [here](https://mullvad.net/en/blog/dns-traffic-can-leak-outside-the-vpn-tunnel-on-android).
+
 To protect yourself more, remember to disable Wi-Fi and mobile data before rebooting,
 and only enable them on reboot, after the firewall service has started (and the key icon is visible in the status bar).
 
@@ -252,7 +254,7 @@ You can't disable this notification, but you can remove the icon from the status
 **(25) Can you add a 'Select All' function?**
 
 There is no need for a 'Select All' function
-because you can switch from block (blacklist) to allow (whitelist) mode using Netguard's settings.
+because you can switch from block (blacklist) to allow (whitelist) mode using NetGuard's settings.
 See also [question 0](#user-content-faq0).
 
 <a name="faq27"></a>
@@ -587,7 +589,7 @@ and you should see a different IP address from your regular one, and below in th
 field something else besides _Unknown_.
 
 **Be aware** that all the other Tor caveats (https://www.torproject.org/docs/faq.html.en) still apply,
-like having the Tor network unreacheable, your activity actively monitored/targeted in your country,
+like having the Tor network unreachable, your activity actively monitored/targeted in your country,
 online services (eg. Gmail, Google Play store) failing to login or being forced to solve endless capchas
 when accessing sites that use Cloudflare's CDN services.
 
@@ -629,7 +631,7 @@ In some circumstances, restricting system apps and system components is known to
 Google manages all purchases, so as a developer I have no control over purchases.
 So, the only thing I can do, is give some advice:
 
-* Make sure you have an active internet connection
+* Make sure you have an active, working internet connection, and turn off any VPN based app because it might prevent the Play store from checking purchases
 * Make sure you didn't block Google Play store / Play services
 * Make sure you are logged in with the right Google account and that there is nothing wrong with your Google account
 * Make sure you installed NetGuard via the right Google account if you configured multiple Google accounts on your device

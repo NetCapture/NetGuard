@@ -8,6 +8,14 @@
     <string name="app_agree">Accept</string>
     <string name="app_disagree">Nu accept</string>
     <string name="app_support">NetGuard are nevoie de ajutorul dumneavoastră. Atingeți pentru a achiziționa funcții Pro și a susține proiectul.</string>
+    <string name="app_qap">        Google avea de gând să elimine aplicația din Play Store, deoarece aceasta solicita permisiunea de a interoga lista de aplicații.
+        Cinci apeluri și furnizarea unei justificări bune despre motivul pentru care este nevoie de această permisiune au fost respinse.
+        Această versiune a aplicației nu mai solicită această permisiune,
+        și, în ciuda acestui fapt, aproape toate aplicațiile vor fi în continuare listate,
+        cu excepția unor aplicații (de sistem) care nu pot fi lansate manual din lista de aplicații Android.
+        Traficul de internet al acestor aplicații va fi întotdeauna permis pentru a vă asigura că dispozitivul dvs. continuă să funcționeze corect.
+        Dacă credeți că aceasta este o problemă, puteți actualiza la versiunea GitHub a aplicației și puteți gestiona din nou toate aplicațiile (de sistem).
+    </string>
     <string name="channel_foreground">Serviciile care rulează</string>
     <string name="channel_notify">Notificări generale</string>
     <string name="channel_access">Notificări acces</string>
@@ -73,7 +81,7 @@
     <string name="setting_metered_2g">Consideră 2G necontorizat</string>
     <string name="setting_metered_3g">Consideră 3G necontorizat</string>
     <string name="setting_metered_4g">Consideră 4G/LTE necontorizat</string>
-    <string name="setting_national_roaming">Ignoră roamingul național</string>
+    <string name="setting_national_roaming">Ignoră roaming național</string>
     <string name="setting_eu_roaming">Ignoră roaming în UE</string>
     <string name="setting_call">Dezactivare în timpul apelului</string>
     <string name="setting_lockdown_wifi">Închide Wi-Fi</string>
@@ -124,7 +132,7 @@
     <string name="setting_technical_networks">Reţele</string>
     <string name="setting_technical_subscription">Abonamente</string>
     <string name="summary_install">Arată o notificare în bara de stare pentru a configura aplicațiile noi instalate (versiune pro)</string>
-    <string name="summary_auto">După dezactivare din widget, activează automat NetGuard după numărul selectat de minute (valoarea zero dezactivează opțiunea)</string>
+    <string name="summary_auto">După dezactivarea din widget, activează automat NetGuard după numărul selectat de minute (valoarea zero dezactivează opțiunea)</string>
     <string name="summary_delay">După oprirea ecranului, păstrează regulile ecran pornit pentru numărul selectat de minute (valoarea zero dezactivează opțiunea)</string>
     <string name="summary_update">De două ori pe zi se va verifica dacă a fost publicată pe GitHub o nouă versiune</string>
     <string name="summary_tethering">În funcție de versiunea de Android, partajarea conexiunii (tethering/hotspot) ar putea funcționa sau nu. Traficul partajat nu poate fi filtrat.</string>
@@ -156,6 +164,7 @@
     <string name="msg_hosts">%1$d permise, %2$d blocate, %3$d domenii blocate</string>
     <string name="msg_waiting">Așteptare eveniment</string>
     <string name="msg_disabled">NetGuard este momentan dezactivat, folosește comutatorul de mai sus pentru a îl activa</string>
+    <string name="msg_notifications">Atinge pentru a acorda permisiuni de notificare (pentru notificări de acces, mesaje de eroare, etc.)</string>
     <string name="msg_revoked">NetGuard a fost dezactivat, probabil de o altă aplicație ce folosește o conexiune VPN</string>
     <string name="msg_installed">\'%1$s\' instalat</string>
     <string name="msg_installed_n">A fost instalat</string>

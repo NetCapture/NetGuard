@@ -8,6 +8,14 @@
     <string name="app_agree">J\'accepte</string>
     <string name="app_disagree">Je refuse</string>
     <string name="app_support">NetGuard a besoin de votre aide. Appuyez pour acheter des fonctionnalités Pro pour continuer à faire avancer le projet.</string>
+    <string name="app_qap">        Google avait l\'intention de retirer l\'application du Play Store parce qu\'elle nécessitait une autorisation pour lister toutes les applications.
+        Cinq requêtes assorties d\'une justification valable à propos du besoin de cette autorisation, ont été rejetées.
+        Cette version de l\'application n\'utilise plus cette autorisation,
+        et malgré cela, presque toutes les applications seront toujours listées,
+        à l\'exception de certaines applications (système) qui ne peuvent pas être démarrées manuellement depuis la liste des applications d\'Android.
+        Le trafic Internet de ces applications sera toujours autorisé afin de s\'assurer que votre appareil fonctionne correctement.
+        Si ceci vous pose problème, vous pouvez mettre à jour l\'application en utilisant la version sur GitHub et gérer de nouveau toutes les applications (système).
+    </string>
     <string name="channel_foreground">Services en cours d\'exécution</string>
     <string name="channel_notify">Notifications générales</string>
     <string name="channel_access">Accéder aux notifications</string>
@@ -156,6 +164,7 @@
     <string name="msg_hosts">%1$d autorisée(s), %2$d bloquée(s), %3$d hôte(s)</string>
     <string name="msg_waiting">En attente d\'évènement</string>
     <string name="msg_disabled">NetGuard est désactivé, utilisez le bouton ci-dessus pour activer NetGuard</string>
+    <string name="msg_notifications">Appuyer pour accorder les autorisations de notification (pour les notifications de tentatives d\'accès, les messages d\'erreur, etc.)</string>
     <string name="msg_revoked">NetGuard a été désactivé, probablement en utilisant une autre application VPN</string>
     <string name="msg_installed">%1$s installé</string>
     <string name="msg_installed_n">A été installé</string>
@@ -200,7 +209,7 @@ Votre trafic Internet n\'est pas envoyé vers un serveur VPN distant.</string>
     <string name="msg_system">La gestion des applications système peut être activée dans les options avancées</string>
     <string name="msg_issue">Veuillez décrire le problème et indiquer l\'heure à laquelle il est survenu :</string>
     <string name="msg_vpn_cancelled">La connexion VPN a été arrêtée\nAvez-vous configuré un autre VPN destiné à être un VPN toujours actif ?</string>
-    <string name="msg_on">Si vous éteignez votre appareil avec NetGuard activé, celui ci démarrera automatiquement lorsque vous rallumerez votre appareil</string>
+    <string name="msg_on">Si NetGuard est activé lorsque vous éteignez votre appareil, il redémarrera automatiquement lorsque vous rallumerez l\'appareil</string>
     <string name="msg_unavailable">Cette fonctionnalité n’est pas disponible sur cette version d’Android</string>
     <string name="msg_always_on">Un autre VPN est défini comme VPN permanent</string>
     <string name="msg_always_on_lockdown">Désactiver \"Bloquer les connexions sans VPN\" dans les paramètres VPN d\'Android pour utiliser le filtrage de NetGuard</string>

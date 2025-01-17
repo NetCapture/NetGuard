@@ -67,3 +67,4 @@ package-lock.json
 
 keystore.properties
 crowdin.properties
+app/.cxx/

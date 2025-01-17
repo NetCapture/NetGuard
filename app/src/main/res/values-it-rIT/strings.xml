@@ -8,6 +8,12 @@
     <string name="app_agree">Acconsento</string>
     <string name="app_disagree">Nego il consenso</string>
     <string name="app_support">NetGuard ha bisogno del tuo aiuto. Tocca per acquistare le funzionalità pro per sostenere il progetto.</string>
+    <string name="app_qap">Google aveva intenzione di rimuovere l\'app dal Play Store, perché richiedeva i permessi di investigare tutte le app.
+Cinque appelli e aver fornito una buona giustificazione sul perché questo permesso è necessario sono stati respinti.
+Questa versione dell\'app non richiede più questo permesso, e, nonostante ciò, quasi tutte le app sono ancora elencate,
+ad eccezione di alcune app (di sitema) che non possono essere avviate manualmente dalla lista delle app di Android.
+Il traffico internet di queste app sarà sempre permesso per assicurare che il tuo dispositivo continui a funzionare correttamente.
+Se pensi che questo sia un problema,  potrai fare l\'update  alla versione GitHub dell\'app e gestire ancora tutte le app (di sistema).    </string>
     <string name="channel_foreground">Servizi in esecuzione</string>
     <string name="channel_notify">Notifiche generali</string>
     <string name="channel_access">Notifiche d\'accesso</string>
@@ -156,6 +162,7 @@
     <string name="msg_hosts">%1$d consentiti, %2$d bloccati, %3$d host</string>
     <string name="msg_waiting">In attesa dell\'evento</string>
     <string name="msg_disabled">NetGuard è disabilitato, usa l\'interruttore sopra per abilitare NetGuard</string>
+    <string name="msg_notifications">Tocca per concedere le autorizzazioni per le notifiche (per le notifiche sui tentativi di accesso, messaggi di errore, etc.)</string>
     <string name="msg_revoked">NetGuard è stata disabilitata, probabilmente usando un\'altra app basata sul VPN</string>
     <string name="msg_installed">\'%1$s\' installata</string>
     <string name="msg_installed_n">È stata installata</string>

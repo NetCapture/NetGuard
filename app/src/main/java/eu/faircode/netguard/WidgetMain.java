@@ -16,7 +16,7 @@ package eu.faircode.netguard;
     You should have received a copy of the GNU General Public License
     along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2015-2019 by Marcel Bokhorst (M66B)
+    Copyright 2015-2024 by Marcel Bokhorst (M66B)
 */
 
 import android.app.PendingIntent;
@@ -47,7 +47,7 @@ public class WidgetMain extends AppWidgetProvider {
             try {
                 Intent intent = new Intent(enabled ? WidgetAdmin.INTENT_OFF : WidgetAdmin.INTENT_ON);
                 intent.setPackage(context.getPackageName());
-                PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
+                PendingIntent pi = PendingIntentCompat.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
                 for (int id : appWidgetIds) {
                     RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widgetmain);
                     views.setOnClickPendingIntent(R.id.ivEnabled, pi);

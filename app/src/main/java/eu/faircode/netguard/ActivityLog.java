@@ -16,7 +16,7 @@ package eu.faircode.netguard;
     You should have received a copy of the GNU General Public License
     along with NetGuard.  If not, see <http://www.gnu.org/licenses/>.
 
-    Copyright 2015-2019 by Marcel Bokhorst (M66B)
+    Copyright 2015-2024 by Marcel Bokhorst (M66B)
 */
 
 import android.content.ClipData;
@@ -525,11 +525,18 @@ public class ActivityLog extends AppCompatActivity implements SharedPreferences.
             boolean other = prefs.getBoolean("proto_other", true);
             boolean allowed = prefs.getBoolean("traffic_allowed", true);
             boolean blocked = prefs.getBoolean("traffic_blocked", true);
-            adapter.changeCursor(DatabaseHelper.getInstance(this).getLog(udp, tcp, other, allowed, blocked));
+
+            String query = null;
             if (menuSearch != null && menuSearch.isActionViewExpanded()) {
                 SearchView searchView = (SearchView) menuSearch.getActionView();
-                adapter.getFilter().filter(getUidForName(searchView.getQuery().toString()));
+                if (searchView != null)
+                    query = getUidForName(searchView.getQuery().toString());
             }
+
+            if (TextUtils.isEmpty(query))
+                adapter.changeCursor(DatabaseHelper.getInstance(this).getLog(udp, tcp, other, allowed, blocked));
+            else
+                adapter.changeCursor(DatabaseHelper.getInstance(ActivityLog.this).searchLog(query));
         }
     }
 

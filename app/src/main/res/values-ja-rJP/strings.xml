@@ -8,6 +8,13 @@
     <string name="app_agree">同意する</string>
     <string name="app_disagree">同意しない</string>
     <string name="app_support">NetGuard にはあなたの支援が必要です。プロジェクトを維持するため、タップしてプロ版を購入してください。</string>
+    <string name="app_qap">        Google は、このアプリがすべてのアプリのクエリを実行する権限を要求することを理由に Play ストアから削除しようとしています。
+        5 回の不服申し立てと、この権限を必要とする理由の弁明はすべて拒否されました。
+        対策のため、このバージョンでは問題となった権限を要求しません。
+        それでもほとんどのアプリは一覧に表示されますが、いくつかの (システム) アプリは Android アプリリストから操作できません。
+        これらのアプリのインターネットトラフィックは、端末を正常に動作させ続けるために常に許可されます。
+        この変更が問題となる場合には、Github 版を使用するとシステムアプリを含むすべてのアプリを管理できます。
+    </string>
     <string name="channel_foreground">実行中のサービス</string>
     <string name="channel_notify">全般通知</string>
     <string name="channel_access">アクセス通知</string>
@@ -156,6 +163,7 @@
     <string name="msg_hosts">許可 %1$d、ブロック %2$d、ホスト %3$d</string>
     <string name="msg_waiting">イベントの待機中</string>
     <string name="msg_disabled">NetGuard は無効です。有効にするには上のスイッチを使用してください</string>
+    <string name="msg_notifications">タップすると通知の権限を付与します (アクセス試行通知、エラーメッセージなど)</string>
     <string name="msg_revoked">NetGuard が無効にされました。別の VPN ベースのアプリケーションを使用した可能性があります</string>
     <string name="msg_installed">\'%1$s\' がインストールされました</string>
     <string name="msg_installed_n">インストールされています</string>
@@ -190,7 +198,7 @@
     <string name="msg_metered">ネットワークは従量制です</string>
     <string name="msg_inactive">アクティブなインターネット接続がありません</string>
     <string name="msg_queue">NetGuard はビジーです</string>
-    <string name="msg_update">アップデートが利用できます。タップするとダウンロードします</string>
+    <string name="msg_update">更新できます。タップするとダウンロードします</string>
     <string name="msg_usage">アプリの横にあるアイコンをタップして、Wi-Fi またはモバイルインターネットアクセスを、許可 (緑) または拒否 (赤) することができます</string>
     <string name="msg_fairemail">プライバシーを保護するために NetGuard をインストールした場合、オープンソースのプライバシーフレンドリーなメールアプリ <a href="https://email.faircode.eu/">FairEmail</a> にもご興味ありませんか</string>
     <string name="msg_whitelist">デフォルトで、インターネットアクセスが許可されます。これは設定で変更することができます</string>
